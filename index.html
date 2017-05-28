@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <HTML>
     
 <head>
@@ -7,11 +7,23 @@
     
 <style>
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400');
-    p {margin-top: 0.3em;margin-bottom: 0.3em; font-size: 14pt; font-family: "Fira Sams" sans-serif; font-weight: 400;}
+    p {margin-top: 0.3em;margin-bottom: 0.3em; font-size: 14pt; font-family: "Fira Sams" sans-serif; font-weight: 300;}
     
     h1 {margin: 0; font-size: 32pt; font-family: "Fira Sans", sans serif; font-weight: 400;}
     
-    h2 {margin-top: 0.4em;margin-bottom: 0.1em; font-size: 24pt; font-family: "Fira Sans", sans serif; font-weight: 400;}
+    h2 {margin-top: 0.4em;margin-bottom: 0.1em; font-size: 24pt; font-family: "Fira Sans", sans serif; font-weight: 400; }
+    
+    #überschrift, .aufgabe {
+        padding: .5%; 
+    }
+    .aufgabe {
+        text-align: left;
+        float: left;
+        margin-right: 3em;
+    }
+    #a9 {
+       
+    }
     
     
 </style>
@@ -21,14 +33,24 @@
     
     
 <body>
-    <h1>CG Aufgaben</h1>
-    <p>Link zu meinem Computergrafik Github Repository <a href="https://github.com/koenigmm/ComputergrafikMIB" target="_blank">hier</a></p>
-    <h2>Aufgabe 8</h2>
-    <p>Github <a href="https://github.com/koenigmm/ComputergrafikMIB/tree/koenigmmAufgabe/08_FirstSteps" target="_blank">hier</a></p>
-    <p>Web-Version <a href="https://koenigmm.github.io/Aufgabe8/Fusee.Tutorial.Web.html" target="_blank">hier</a></p>
-    <h2>Aufgabe 9</h2>
-    <p>Github <a href="https://github.com/koenigmm/ComputergrafikMIB/tree/koenigmmAufgabe/09_HierarchyAndInput" target="_blank">hier</a></p>
-    <p>Web-Version <a href="https://koenigmm.github.io/Aufgabe9/Fusee.Tutorial.Web.html" target="_blank">hier</a></p>
+    <div id="außen">
+        <div id="überschrift">
+            <h1>CG Aufgaben</h1>
+            <p>Link zu meinem Computergrafik Github Repository <a href="https://github.com/koenigmm/ComputergrafikMIB" target="_blank">hier</a></p>
+        </div>
+        
+        <div id="a8" class="aufgabe">
+            <h2>Aufgabe 8</h2>
+            <p>Github <a href="https://github.com/koenigmm/ComputergrafikMIB/tree/koenigmmAufgabe/08_FirstSteps" target="_blank">hier</a></p>
+            <p>Web-Version <a href="https://koenigmm.github.io/Aufgabe8/Fusee.Tutorial.Web.html" target="_blank">hier</a></p>
+        </div>
+        
+        <div id="a9" class="aufgabe">
+            <h2>Aufgabe 9</h2>
+            <p>Github <a href="https://github.com/koenigmm/ComputergrafikMIB/tree/koenigmmAufgabe/09_HierarchyAndInput" target="_blank">hier</a></p>
+            <p>Web-Version <a href="https://koenigmm.github.io/Aufgabe9/Fusee.Tutorial.Web.html" target="_blank">hier</a></p>
+        </div>
+    </div>
 </body>
 
 
