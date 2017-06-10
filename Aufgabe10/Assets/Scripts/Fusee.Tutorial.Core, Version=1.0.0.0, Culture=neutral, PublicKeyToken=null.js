@@ -140,7 +140,7 @@ JSIL.DeclareNamespace("Fusee.Tutorial.Core");
   }; 
 
   function Mesh_Init () {
-    (this.RenderCanvas$RC$value.ClearColor = $S05().Construct(0.8, 0.9, 0.7, 1));
+    (this.RenderCanvas$RC$value.ClearColor = $S05().Construct(1, 0.5, 0.3, 1));
     this._scene = this.CreateScene();
     this._sceneRenderer = $S06().Construct(this._scene);
   }; 
