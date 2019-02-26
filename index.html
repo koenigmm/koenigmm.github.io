@@ -203,13 +203,40 @@
     </div>
 
     <div class="container" id="contact-container">
-        <button type="button" class="btn btn-primary" id="contact-button">E-Mail-Adresse anzeigen</button>
-        <div class="card" style="max-width: fit-content">
-            <div class="card-body">
-                <span id="button-adress"></span>
+        <div class="row">
+            <div class="col-md">
+                <button type="button" class="btn btn-primary" id="contact-button">E-Mail-Adresse anzeigen</button>
+                <div class="card" style="max-width: fit-content">
+                    <div class="card-body">
+                        <span id="button-adress"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <h3 class="mb-4">
+                    Kontaktformular
+                    <small class="text-muted">über formspree</small>
+                </h3>
+                <form action="https://formspree.io/kontakt+forms@koenigmarius.de" method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-Mail-Adresse</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Bitte E-Mail-Adresse eingeben">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ihre Nachricht</label>
+                        <textarea class="form-control" id="exampleInputPassword1"
+                            placeholder="Bitte Nachricht eingeben"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Senden</button>
+                </form>
             </div>
         </div>
     </div>
+
+
+
 
 
     <div class="card">
@@ -535,7 +562,7 @@
                                     Abs. 1 lit. f. DSGVO) Inhalts- oder Serviceangebote von Drittanbietern ein, um deren
                                     Inhalte und Services, wie z.B. Videos oder Schriftarten einzubinden (nachfolgend
                                     einheitlich bezeichnet als “Inhalte”). <br>
-                                    
+
                                     <br>
                                     Dies setzt immer voraus, dass die Drittanbieter dieser Inhalte, die IP-Adresse der
                                     Nutzer wahrnehmen, da sie ohne die IP-Adresse die Inhalte nicht an deren Browser
@@ -563,26 +590,26 @@
                             </p>
 
                             <p></p>
-                                    <h3>Content Delivery Network (CDN)</h3>
-                                    <br>
-                                    Wir setzen ein so genanntes "Content Delivery Network" (CDN), angeboten von
-                                    Github und Bootstrap ein.
+                            <h3>Content Delivery Network (CDN)</h3>
+                            <br>
+                            Wir setzen ein so genanntes "Content Delivery Network" (CDN), angeboten von
+                            Github und Bootstrap ein.
 
-                                    Ein CDN ist ein Dienst, mit dessen Hilfe Inhalte unseres Onlineangebotes,
-                                    insbesondere große Mediendateien, wie Grafiken oder Skripte mit Hilfe regional
-                                    verteilter und über das Internet verbundener Server, schneller ausgeliefert
-                                    werden. Die Verarbeitung der Daten der Nutzer erfolgt alleine zu den
-                                    vorgenannten Zwecken und der Aufrechterhaltung der Sicherheit und
-                                    Funktionsfähigkeit des CDN.
+                            Ein CDN ist ein Dienst, mit dessen Hilfe Inhalte unseres Onlineangebotes,
+                            insbesondere große Mediendateien, wie Grafiken oder Skripte mit Hilfe regional
+                            verteilter und über das Internet verbundener Server, schneller ausgeliefert
+                            werden. Die Verarbeitung der Daten der Nutzer erfolgt alleine zu den
+                            vorgenannten Zwecken und der Aufrechterhaltung der Sicherheit und
+                            Funktionsfähigkeit des CDN.
 
-                                    Die Nutzung erfolgt auf Grundlage unserer berechtigten Interessen, d.h.
-                                    Interesse an einer sicheren und effizienten Bereitstellung, Analyse sowie
-                                    Optimierung unseres Onlineangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO.
-                                    </br>
+                            Die Nutzung erfolgt auf Grundlage unserer berechtigten Interessen, d.h.
+                            Interesse an einer sicheren und effizienten Bereitstellung, Analyse sowie
+                            Optimierung unseres Onlineangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO.
+                            <br>
                             <p></p>
                             <h3 id="dsg-thirdparty-googlefonts">Google Fonts</h3>
                             <p></p>
-                                
+
                             <p><span class="ts-muster-content">Wir binden die Schriftarten ("Google Fonts") des
                                     Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland,
                                     ein. Nach Angaben von Google werden die Daten der Nutzer allein zu Zwecken der
