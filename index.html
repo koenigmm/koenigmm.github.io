@@ -4,30 +4,17 @@
     <title>Marius König - Student Medieninformatik</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#1565c0">
+    <meta name="theme-color" content="#0d47a1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="./img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
-    <style>
-        .jumbotron {
-            background-color: rgba(200, 200, 240, 0.2);
-            margin-bottom: 0%;
-        }
-
-        #button-adress {
-            font-size: 14pt;
-        }
-
-        #contact-container {
-            padding-bottom: 5em;
-            padding-top: 3.5em;
-        }
-    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg navbar-light sticky-top" style="background-color: #1565c0">
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-light sticky-top" style="background-color: #0d47a1">
         <a class="navbar-brand" href="#">Marius König</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +26,7 @@
                 <a class="nav-item nav-link" href="#my-video">Video</a>
                 <a class="nav-item nav-link" href="#about-me">Über Mich</a>
                 <a class="nav-item nav-link" href="#studium">Inhalte Studium</a>
-                <a class="nav-item nav-link" href="#button-adress">Kontakt</a>
+                <a class="nav-item nav-link" href="#link-contact">Kontakt</a>
             </div>
         </div>
     </nav>
@@ -74,13 +61,13 @@
 
 
     <div class="container mb-3 mt-5" id="about-me">
-        <h2>Über mich</h2>
+        <h2 class="font-weight-bold">Über mich</h2>
     </div>
 
     <div class="container mb-5">
         <div class="row">
             <div class="col-sm">
-                <h3>Sprachen</h3>
+                <h3 class="font-weight-bold">Sprachen</h3>
 
                 <div class="progress">
                     <div class="progress-bar w-100" role="progressbar" aria-valuenow="100" aria-valuemin="0"
@@ -106,7 +93,7 @@
                 <p>Französisch</p>
             </div>
             <div class="col-sm">
-                <h3>Programmiersprachen und Web</h3>
+                <h3 class="font-weight-bold">Programmiersprachen und Web</h3>
 
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
@@ -144,7 +131,7 @@
                 <p>Wordpress</p>
             </div>
             <div class="col-sm">
-                <h3>Programme</h3>
+                <h3 class="font-weight-bold">Programme</h3>
 
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
@@ -203,35 +190,42 @@
         <img src="./img/sem3uprax.png" class="img-fluid" alt="Responsive image">
     </div>
 
-    <div class="container" id="contact-container">
+    <span id="link-contact"></span>
+
+    <div class="container temp-padding" id="tp-id">
+        <button type="button" class="btn btn-outline-primary" id="show-contact">E-Mail Adresse und Kontaktformular anzeigen</button>
+    </div>
+
+    <div class="container d-none" id="contact-container">
         <div class="row">
             <div class="col-md">
-                <button type="button" class="btn btn-primary" id="contact-button">E-Mail-Adresse anzeigen</button>
-                <div class="card mb-3" style="max-width: fit-content">
-                    <div class="card-body">
-                        <span id="button-adress"></span>
+                <h4>E-Mail-Adresse</h3>
+                    <!-- <button type="button" class="btn btn-primary" id="contact-button">E-Mail-Adresse anzeigen</button> -->
+                    <div class="card mb-4" style="max-width: fit-content">
+                        <div class="card-body">
+                            <span id="show-adress">Bitte Warten</span>
+                        </div>
                     </div>
-                </div>
             </div>
 
             <div class="col-md">
-                <h3 class="mb-4">
+                <h4 class="mb-4">
                     Kontaktformular
                     <small class="text-muted">über formspree</small>
-                </h3>
-                <form action="https://formspree.io/kontakt+forms@koenigmarius.de" method="POST">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">E-Mail-Adresse</label>
-                        <input type="email" name="E-Mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Bitte E-Mail-Adresse eingeben">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Ihre Nachricht</label>
-                        <input class="form-control" type="text" name="text" id="exampleInputPassword1"
-                            placeholder="Bitte Nachricht eingeben"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Senden</button>
-                </form>
+                    </h3>
+                    <form id="form" action="bla bla" method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">E-Mail-Adresse</label>
+                            <input type="email" name="E-Mail" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Bitte E-Mail-Adresse eingeben">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ihre Nachricht</label>
+                            <input class="form-control" type="text" name="text" id="exampleInputPassword1"
+                                placeholder="Bitte Nachricht eingeben"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Senden</button>
+                    </form>
             </div>
         </div>
     </div>
@@ -289,7 +283,8 @@
                         <div class="modal-body">
                             <h2>Datenschutzerklärung</h2>
                             <h3 id="dsg-general-intro"></h3>
-                            <p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung
+                            <p class="text-justify">Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und
+                                Zweck der Verarbeitung
                                 von personenbezogenen Daten (nachfolgend kurz „Daten“) im Rahmen der Erbringung unserer
                                 Leistungen sowie innerhalb unseres Onlineangebotes und der mit ihm verbundenen
                                 Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social
@@ -300,28 +295,32 @@
                                 <br>
                             </p>
                             <h3 id="dsg-general-controller">Verantwortlicher</h3>
-                            <p><span class="tsmcontroller">Marius König<br>
+                            <p class="text-justify"><span class="tsmcontroller">Marius König<br>
                                     Kandelstr. 7 <br>
                                     79183 Waldkirch<br>
                                     E-Mail-Adresse Siehe Button</span></p>
                             <h3 id="dsg-general-datatype">Arten der verarbeiteten Daten</h3>
-                            <p>- Bestandsdaten (z.B., Personen-Stammdaten, Namen oder Adressen).<br>
+                            <p class="text-justify">- Bestandsdaten (z.B., Personen-Stammdaten, Namen oder
+                                Adressen).<br>
                                 - Kontaktdaten (z.B., E-Mail, Telefonnummern).<br>
                                 - Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos).<br>
                                 - Nutzungsdaten (z.B., besuchte Webseiten, Interesse an Inhalten, Zugriffszeiten).<br>
                                 - Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen).</p>
                             <h3 id="dsg-general-datasubjects">Kategorien betroffener Personen</h3>
-                            <p>Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen
+                            <p class="text-justify">Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir
+                                die betroffenen
                                 Personen zusammenfassend auch als „Nutzer“).<br>
                             </p>
                             <h3 id="dsg-general-purpose">Zweck der Verarbeitung</h3>
-                            <p>- Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte.<br>
+                            <p class="text-justify">- Zurverfügungstellung des Onlineangebotes, seiner Funktionen und
+                                Inhalte.<br>
                                 - Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.<br>
                                 - Sicherheitsmaßnahmen.<br>
                                 - Reichweitenmessung/Marketing<br>
                                 <span class="tsmcom"></span></p>
                             <h3 id="dsg-general-terms">Verwendete Begrifflichkeiten </h3>
-                            <p>„Personenbezogene Daten“ sind alle Informationen, die sich auf eine identifizierte oder
+                            <p class="text-justify">„Personenbezogene Daten“ sind alle Informationen, die sich auf eine
+                                identifizierte oder
                                 identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als
                                 identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt,
                                 insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu
@@ -357,7 +356,8 @@
                                 verarbeitet.<br>
                             </p>
                             <h3 id="dsg-general-legalbasis">Maßgebliche Rechtsgrundlagen</h3>
-                            <p>Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer
+                            <p class="text-justify">Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen
+                                unserer
                                 Datenverarbeitungen mit. Für Nutzer aus dem Geltungsbereich der
                                 Datenschutzgrundverordnung (DSGVO), d.h. der EU und des EWG gilt, sofern die
                                 Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, Folgendes: <br>
@@ -382,7 +382,8 @@
                                 bestimmt sich nach den Vorgaben des Art. 9 Abs. 2 DSGVO. <br>
                             </p>
                             <h3 id="dsg-general-securitymeasures">Sicherheitsmaßnahmen</h3>
-                            <p>Wir treffen nach Maßgabe der gesetzlichen Vorgabenunter Berücksichtigung des Stands der
+                            <p class="text-justify">Wir treffen nach Maßgabe der gesetzlichen Vorgabenunter
+                                Berücksichtigung des Stands der
                                 Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der
                                 Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und
                                 Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen, geeignete
@@ -401,7 +402,8 @@
                             </p>
                             <h3 id="dsg-general-coprocessing">Zusammenarbeit mit Auftragsverarbeitern, gemeinsam
                                 Verantwortlichen und Dritten</h3>
-                            <p>Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und
+                            <p class="text-justify">Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen
+                                Personen und
                                 Unternehmen (Auftragsverarbeitern, gemeinsam Verantwortlichen oder Dritten) offenbaren,
                                 sie an diese übermitteln oder ihnen sonst Zugriff auf die Daten gewähren, erfolgt dies
                                 nur auf Grundlage einer gesetzlichen Erlaubnis (z.B. wenn eine Übermittlung der Daten an
@@ -416,7 +418,8 @@
                                 Vorgaben entsprechenden Grundlage. <br>
                             </p>
                             <h3 id="dsg-general-thirdparty">Übermittlungen in Drittländer</h3>
-                            <p>Sofern wir Daten in einem Drittland (d.h. außerhalb der Europäischen Union (EU), des
+                            <p class="text-justify">Sofern wir Daten in einem Drittland (d.h. außerhalb der Europäischen
+                                Union (EU), des
                                 Europäischen Wirtschaftsraums (EWR) oder der Schweizer Eidgenossenschaft) verarbeiten
                                 oder dies im Rahmen der Inanspruchnahme von Diensten Dritter oder Offenlegung, bzw.
                                 Übermittlung von Daten an andere Personen oder Unternehmen geschieht, erfolgt dies nur,
@@ -432,7 +435,8 @@
                                     href="https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu_de"
                                     target="blank">Informationsseite der EU-Kommission</a>).</p>
                             <h3 id="dsg-general-rightssubject">Rechte der betroffenen Personen</h3>
-                            <p>Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob betreffende Daten
+                            <p class="text-justify">Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob
+                                betreffende Daten
                                 verarbeitet werden und auf Auskunft über diese Daten sowie auf weitere Informationen und
                                 Kopie der Daten entsprechend den gesetzlichen Vorgaben.<br>
                                 <br>
@@ -452,14 +456,16 @@
                                 der zuständigen Aufsichtsbehörde einzureichen.<br>
                             </p>
                             <h3 id="dsg-general-revokeconsent">Widerrufsrecht</h3>
-                            <p>Sie haben das Recht, erteilte Einwilligungen mit Wirkung für die Zukunft zu widerrufen.
+                            <p class="text-justify">Sie haben das Recht, erteilte Einwilligungen mit Wirkung für die
+                                Zukunft zu widerrufen.
                             </p>
                             <h3 id="dsg-general-object">Widerspruchsrecht</h3>
                             <p><strong>Sie können der künftigen Verarbeitung der Sie betreffenden Daten nach Maßgabe der
                                     gesetzlichen Vorgaben jederzeit widersprechen. Der Widerspruch kann insbesondere
                                     gegen die Verarbeitung für Zwecke der Direktwerbung erfolgen.</strong></p>
                             <h3 id="dsg-general-cookies">Cookies und Widerspruchsrecht bei Direktwerbung</h3>
-                            <p>Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der Nutzer gespeichert
+                            <p class="text-justify">Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der
+                                Nutzer gespeichert
                                 werden. Innerhalb der Cookies können unterschiedliche Angaben gespeichert werden. Ein
                                 Cookie dient primär dazu, die Angaben zu einem Nutzer (bzw. dem Gerät auf dem das Cookie
                                 gespeichert ist) während oder auch nach seinem Besuch innerhalb eines Onlineangebotes zu
@@ -507,7 +513,8 @@
                                 in den Einstellungen des Browsers erreicht werden. Bitte beachten Sie, dass dann
                                 gegebenenfalls nicht alle Funktionen dieses Onlineangebotes genutzt werden können.</p>
                             <h3 id="dsg-general-erasure">Löschung von Daten</h3>
-                            <p>Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen Vorgaben gelöscht
+                            <p class="text-justify">Die von uns verarbeiteten Daten werden nach Maßgabe der gesetzlichen
+                                Vorgaben gelöscht
                                 oder in ihrer Verarbeitung eingeschränkt. Sofern nicht im Rahmen dieser
                                 Datenschutzerklärung ausdrücklich angegeben, werden die bei uns gespeicherten Daten
                                 gelöscht, sobald sie für ihre Zweckbestimmung nicht mehr erforderlich sind und der
@@ -518,7 +525,8 @@
                                 gesperrt und nicht für andere Zwecke verarbeitet. Das gilt z.B. für Daten, die aus
                                 handels- oder steuerrechtlichen Gründen aufbewahrt werden müssen.</p>
                             <h3 id="dsg-general-changes">Änderungen und Aktualisierungen der Datenschutzerklärung</h3>
-                            <p>Wir bitten Sie sich regelmäßig über den Inhalt unserer Datenschutzerklärung zu
+                            <p class="text-justify">Wir bitten Sie sich regelmäßig über den Inhalt unserer
+                                Datenschutzerklärung zu
                                 informieren. Wir passen die Datenschutzerklärung an, sobald die Änderungen der von uns
                                 durchgeführten Datenverarbeitungen dies erforderlich machen. Wir informieren Sie, sobald
                                 durch die Änderungen eine Mitwirkungshandlung Ihrerseits (z.B. Einwilligung) oder eine
@@ -526,7 +534,8 @@
                             <p></p>
                             <h3 id="dsg-hostingprovider">Hosting und E-Mail-Versand</h3>
                             <p></p>
-                            <p><span class="ts-muster-content">Die von uns in Anspruch genommenen Hosting-Leistungen
+                            <p class="text-justify"><span class="ts-muster-content">Die von uns in Anspruch genommenen
+                                    Hosting-Leistungen
                                     dienen der Zurverfügungstellung der folgenden Leistungen: Infrastruktur- und
                                     Plattformdienstleistungen, Rechenkapazität, Speicherplatz und Datenbankdienste,
                                     E-Mail-Versand, Sicherheitsleistungen sowie technische Wartungsleistungen, die wir
@@ -541,7 +550,8 @@
                             <p></p>
                             <h3 id="dsg-logfiles">Erhebung von Zugriffsdaten und Logfiles</h3>
                             <p></p>
-                            <p><span class="ts-muster-content">Wir, bzw. unser Hostinganbieter, erhebt auf Grundlage
+                            <p class="text-justify"><span class="ts-muster-content">Wir, bzw. unser Hostinganbieter,
+                                    erhebt auf Grundlage
                                     unserer berechtigten Interessen im Sinne des Art. 6 Abs. 1 lit. f. DSGVO Daten über
                                     jeden Zugriff auf den Server, auf dem sich dieser Dienst befindet (sogenannte
                                     Serverlogfiles). Zu den Zugriffsdaten gehören Name der abgerufenen Webseite, Datei,
@@ -557,7 +567,8 @@
                             <p></p>
                             <h3 id="dsg-thirdparty-einleitung">Einbindung von Diensten und Inhalten Dritter</h3>
                             <p></p>
-                            <p><span class="ts-muster-content">Wir setzen innerhalb unseres Onlineangebotes auf
+                            <p class="text-justify"><span class="ts-muster-content">Wir setzen innerhalb unseres
+                                    Onlineangebotes auf
                                     Grundlage unserer berechtigten Interessen (d.h. Interesse an der Analyse,
                                     Optimierung und wirtschaftlichem Betrieb unseres Onlineangebotes im Sinne des Art. 6
                                     Abs. 1 lit. f. DSGVO) Inhalts- oder Serviceangebote von Drittanbietern ein, um deren
@@ -582,7 +593,8 @@
                             <p></p>
                             <h3 id="dsg-thirdparty-youtube">Youtube</h3>
                             <p></p>
-                            <p><span class="ts-muster-content">Wir binden die Videos der Plattform “YouTube” des
+                            <p class="text-justify"><span class="ts-muster-content">Wir binden die Videos der Plattform
+                                    “YouTube” des
                                     Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland,
                                     ein. Datenschutzerklärung: <a target="_blank"
                                         href="https://www.google.com/policies/privacy/">https://www.google.com/policies/privacy/</a>,
@@ -592,26 +604,27 @@
 
                             <p></p>
                             <h3>Content Delivery Network (CDN)</h3>
-                            <br>
-                            Wir setzen ein so genanntes "Content Delivery Network" (CDN), angeboten von
-                            Github und Bootstrap ein.
+                            <p class="text-justify">
+                                Wir setzen ein so genanntes "Content Delivery Network" (CDN), angeboten von
+                                Github und Bootstrap ein.
 
-                            Ein CDN ist ein Dienst, mit dessen Hilfe Inhalte unseres Onlineangebotes,
-                            insbesondere große Mediendateien, wie Grafiken oder Skripte mit Hilfe regional
-                            verteilter und über das Internet verbundener Server, schneller ausgeliefert
-                            werden. Die Verarbeitung der Daten der Nutzer erfolgt alleine zu den
-                            vorgenannten Zwecken und der Aufrechterhaltung der Sicherheit und
-                            Funktionsfähigkeit des CDN.
+                                Ein CDN ist ein Dienst, mit dessen Hilfe Inhalte unseres Onlineangebotes,
+                                insbesondere große Mediendateien, wie Grafiken oder Skripte mit Hilfe regional
+                                verteilter und über das Internet verbundener Server, schneller ausgeliefert
+                                werden. Die Verarbeitung der Daten der Nutzer erfolgt alleine zu den
+                                vorgenannten Zwecken und der Aufrechterhaltung der Sicherheit und
+                                Funktionsfähigkeit des CDN.
 
-                            Die Nutzung erfolgt auf Grundlage unserer berechtigten Interessen, d.h.
-                            Interesse an einer sicheren und effizienten Bereitstellung, Analyse sowie
-                            Optimierung unseres Onlineangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO.
-                            <br>
+                                Die Nutzung erfolgt auf Grundlage unserer berechtigten Interessen, d.h.
+                                Interesse an einer sicheren und effizienten Bereitstellung, Analyse sowie
+                                Optimierung unseres Onlineangebotes gem. Art. 6 Abs. 1 lit. f. DSGVO.
+                            </p>
                             <p></p>
                             <h3 id="dsg-thirdparty-googlefonts">Google Fonts</h3>
                             <p></p>
 
-                            <p><span class="ts-muster-content">Wir binden die Schriftarten ("Google Fonts") des
+                            <p class="text-justify"><span class="ts-muster-content">Wir binden die Schriftarten ("Google
+                                    Fonts") des
                                     Anbieters Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland,
                                     ein. Nach Angaben von Google werden die Daten der Nutzer allein zu Zwecken der
                                     Darstellung der Schriftarten im Browser der Nutzer verwendet. Die Einbindung erfolgt
